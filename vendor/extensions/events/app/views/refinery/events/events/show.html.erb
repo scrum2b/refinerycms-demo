@@ -1,0 +1,47 @@
+<div id="content-event">
+  <div class="container">
+
+    <% content_for :body_content_title do %>
+      <%= @event.title %>
+    <% end %>
+
+    <% content_for :body do %>
+      <section>
+        <h2 class="title-event">
+          <%=raw @event.title %>
+        </h2>
+      </section>
+      <section>
+        <p>
+          <%=raw @event.date.to_formatted_s(:long) %>
+        </p>
+      </section>
+      <section>
+        <p>
+           <%= image_fu(@event.photo, "600x600")%>
+        </p>
+      </section>
+      <section>
+        <p>
+          <%=raw @event.blurb %>
+        </p>
+      </section>
+    <% end %>
+
+    <% content_for :side_body do %>
+      <aside>
+        <h2><%= t('.other') %></h2>
+        <ul id="events">
+          <% @events.each do |event| %>
+            <li>
+              <%= link_to event.title, refinery.events_event_path(event) %>
+              <%= event.date.to_formatted_s(:long) %>
+            </li>
+          <% end %>
+        </ul>
+      </aside>
+    <% end %>
+
+    <%= render '/refinery/content_page' %>
+  </div>
+</div>

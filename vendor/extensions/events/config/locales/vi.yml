@@ -1,0 +1,30 @@
+vi:
+  refinery:
+    plugins:
+      events:
+        title: Sự kiện
+    events:
+      admin:
+        events:
+          actions:
+            create_new: Thêm mới sự kiện
+            reorder: Sắp xếp lại các sự kiện
+            reorder_done: Xong Sự kiện Sắp xếp lại
+          records:
+            title:  Sự kiện
+            sorry_no_results: Xin lỗi! Không có kết quả được tìm thấy.
+            no_items_yet: Không có sự kiện nào. Nhấp vào "Thêm mới sự kiện" để thêm sự kiện đầu tiên của bạn.
+          event:
+            view_live_html: Xem sự kiện này sống <br/><em>(opens in a new window)</em>
+            edit: Chỉnh sửa sự kiện này
+            delete: Hủy bỏ sự kiện này mãi mãi
+      events:
+        show:
+          other: Các sự kiện khác
+  activerecord:
+    attributes:
+      'refinery/events/event':
+        title: Tiêu đề
+        date: Ngày
+        photo: Ảnh
+        blurb: Lời giới thiệu

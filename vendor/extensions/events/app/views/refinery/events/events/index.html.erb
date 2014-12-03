@@ -1,0 +1,31 @@
+<%= render_content_page(@page, {
+      :hide_sections => local_assigns[:hide_sections],
+      :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
+    }) %>
+<%= render '/refinery/draft_page_message' unless @page.try(:live?) -%>
+
+
+<% content_for :body do %>
+	<div id="show-events">
+	 <div class="container">
+		  <div id="events">
+		    <% @events.each do |event| %>
+		      <div class="item-event">
+		      	<div class="image-event">
+		      		 <%= image_fu(event.photo, "250x200")%>
+		      	</div>
+		      	<div class="content-event">
+		      		<h3><%= link_to event.title, refinery.events_event_path(event) %></h3>	
+			        <p><%= event.date.to_formatted_s(:long) %></p>
+			        <%= truncate  event.blurb, :length => 200,
+                      :omission => " ... #{link_to ('Read more'), refinery.events_event_path(event)}",
+                      :preserve_html_tags => true %>
+		      	</div>
+		      </div>
+		    <% end %>
+		  </div>
+		</div>	
+	</div>
+<% end %>
+
+<%= render '/refinery/content_page' %>

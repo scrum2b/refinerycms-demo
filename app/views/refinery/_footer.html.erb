@@ -1,0 +1,29 @@
+<div id="footer">
+	<div class="container">
+		<div class="footer-top">
+			<div class="logo-footer">
+				<span>RUBY ON RAILS</span>
+				<ul>
+					<li><a href="">work@rubyonrails.net</a></li>
+					<li><a href="">+84 12354 457</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>
+		    <%= copywriting('copyright', { :scope => 'footer', 
+		    				                          :default => t('.copyright', :year => Time.now.year,
+		                                                                  :site_name => Refinery::Core.site_name) }) %>
+			</p>
+		</div>
+		<div class="menu-footer">
+			<ul>
+				<li> <a href="/">Home</a></li>
+				<li> <a href="/about-us">About Us</a></li>
+				<li> <a href="/register">Register</a></li>
+				<li> <a href="/site-map">Site Map</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
