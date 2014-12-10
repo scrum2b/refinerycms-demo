@@ -4,12 +4,6 @@ gem 'rails', '3.2.19'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-group :development, :test do
-  gem 'sqlite3'
-end
-
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -55,19 +49,8 @@ gem "refinerycms-news", '~> 2.1.0'
 gem 'refinerycms-copywriting'
 gem 'refinerycms-videojs'
 
-#gem "refinerycms-image_slideshows", '~> 2.0.1'
-# gem 'refinerycms-calendar', '~>2.1.0'
-# gem "refinerycms-image_slideshows", '~> 2.0.1'
-# gem 'refinerycms-portfolio'
-# gem 'refinerycms-image_slideshows', '~>2.0.0'
-# gem "refinerycms-image_slideshows"
-
-# gem 'refinerycms-calendar'
-# gem 'refinerycms-portfolio', :git => 'git://github.com/refinery/refinerycms-portfolio.git', :branch => '2-0-stable'
-
-# gem 'refinerycms-image_slideshows', '~>2.0.0'
-
-
+gem 'pg'
+gem 'rails_12factor'
 gem 'refinerycms-events', :path => 'vendor/extensions'
 #tag blog
 gem 'acts-as-taggable-on', '~> 3.4'
