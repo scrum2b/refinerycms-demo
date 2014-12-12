@@ -60,6 +60,9 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    capistrano-unicorn-nginx (3.1.1)
+      capistrano (>= 3.1)
+      sshkit (>= 1.2.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -262,6 +265,7 @@ DEPENDENCIES
   capistrano-puma
   capistrano-rails (~> 1.1)
   capistrano-rvm (~> 0.1)
+  capistrano-unicorn-nginx (~> 3.1.0)
   coffee-rails (~> 3.2.1)
   jquery-rails
   pg
